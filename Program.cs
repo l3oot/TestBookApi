@@ -1,11 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using TestBookApi.Data;
+using TestBookApi.Interfaces;
+using TestBookApi.Services;
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
     EnvironmentName = "Development"
 });
-
+builder.WebHost.UseUrls("http://localhost:8000");
 builder.Configuration
     .AddJsonFile("appsettings.json")
     .AddJsonFile("appsettings.Development.json", optional: true);
@@ -16,9 +18,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     )
 );
 
+builder.Services.AddHttpClient();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IBookService, BookService>();
+builder.Services.AddScoped<IUserLikeService, UserLikeService>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
 builder.Services.AddControllers();
 
 var app = builder.Build();

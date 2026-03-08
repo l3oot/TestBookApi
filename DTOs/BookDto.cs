@@ -1,7 +1,10 @@
+using System.Text.Json.Serialization;
+
 namespace TestBookApi.DTOs;
 
 public class BookDto
 {
+    public string BookId { get; set; } = string.Empty;
     public string Title { get; set; } = string.Empty;
     public string Subtitle { get; set; } = string.Empty;
     public string Isbn13 { get; set; } = string.Empty;

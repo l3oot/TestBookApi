@@ -24,10 +24,10 @@ namespace myapp.Migrations
 
             modelBuilder.Entity("TestBookApi.Models.User", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("UserId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid")
-                        .HasColumnName("id");
+                        .HasColumnName("user_id");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone")
@@ -51,17 +51,17 @@ namespace myapp.Migrations
                         .HasColumnType("character varying(50)")
                         .HasColumnName("username");
 
-                    b.HasKey("Id");
+                    b.HasKey("UserId");
 
                     b.ToTable("users");
                 });
 
             modelBuilder.Entity("TestBookApi.Models.UserLike", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("UserLikeId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid")
-                        .HasColumnName("id");
+                        .HasColumnName("userlike_id");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone")
@@ -77,11 +77,11 @@ namespace myapp.Migrations
                         .HasColumnType("uuid")
                         .HasColumnName("user_id");
 
-                    b.HasKey("Id");
+                    b.HasKey("UserLikeId");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("user_likes");
+                    b.ToTable("userlikes");
                 });
 
             modelBuilder.Entity("TestBookApi.Models.UserLike", b =>

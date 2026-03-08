@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TestBookApi.Models;
 
-[Table("user_likes")]
+[Table("userlikes")]
 public class UserLike
 {
     [Key]
-    [Column("id")]
-    public Guid Id { get; set; }
+    [Column("userlike_id")]
+    public Guid UserLikeId { get; set; }
 
     [Required]
     [Column("user_id")]

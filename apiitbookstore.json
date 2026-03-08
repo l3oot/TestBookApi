@@ -1,20 +1,22 @@
 {
-    "books": [
-      {
-        "title": "MySQL Cookbook",
-        "subtitle": "Solutions for Database Developers",
-        "isbn13": "9781449374020",
-        "price": "$44.99",
-        "image": "https://itbook.store/img/books/9781449374020.png",
-        "url": "https://itbook.store/books/9781449374020"
-      },
-      {
-        "title": "Learning MySQL",
-        "subtitle": "Get a Handle on Your Data",
-        "isbn13": "9780596008642",
-        "price": "$39.99",
-        "image": "https://itbook.store/img/books/9780596008642.png",
-        "url": "https://itbook.store/books/9780596008642"
-      }
-    ]
-  }
+  "books": [
+    {
+      "book_id": "9781449374020",
+      "title": "MySQL Cookbook",
+      "subtitle": "Solutions for Database Developers",
+      "isbn13": "9781449374020",
+      "price": "$44.99",
+      "image": "https://itbook.store/img/books/9781449374020.png",
+      "url": "https://itbook.store/books/9781449374020"
+    },
+    {
+      "book_id": "9780596008642",
+      "title": "Learning MySQL",
+      "subtitle": "Get a Handle on Your Data",
+      "isbn13": "9780596008642",
+      "price": "$39.99",
+      "image": "https://itbook.store/img/books/9780596008642.png",
+      "url": "https://itbook.store/books/9780596008642"
+    }
+  ]
+}

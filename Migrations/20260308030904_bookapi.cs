@@ -15,7 +15,7 @@ namespace myapp.Migrations
                 name: "users",
                 columns: table => new
                 {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
+                    user_id = table.Column<Guid>(type: "uuid", nullable: false),
                     username = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
                     password = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     fullname = table.Column<string>(type: "character varying(40)", maxLength: 40, nullable: false),
@@ -23,32 +23,32 @@ namespace myapp.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_users", x => x.id);
+                    table.PrimaryKey("PK_users", x => x.user_id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "user_likes",
+                name: "userlikes",
                 columns: table => new
                 {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
+                    userlike_id = table.Column<Guid>(type: "uuid", nullable: false),
                     user_id = table.Column<Guid>(type: "uuid", nullable: false),
                     isbn13 = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
                     created_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_user_likes", x => x.id);
+                    table.PrimaryKey("PK_userlikes", x => x.userlike_id);
                     table.ForeignKey(
-                        name: "FK_user_likes_users_user_id",
+                        name: "FK_userlikes_users_user_id",
                         column: x => x.user_id,
                         principalTable: "users",
-                        principalColumn: "id",
+                        principalColumn: "user_id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_user_likes_user_id",
-                table: "user_likes",
+                name: "IX_userlikes_user_id",
+                table: "userlikes",
                 column: "user_id");
         }
 
@@ -56,7 +56,7 @@ namespace myapp.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "user_likes");
+                name: "userlikes");
 
             migrationBuilder.DropTable(
                 name: "users");
