@@ -16,7 +16,7 @@ API สำหรับร้านหนังสือ IT ออนไลน์
 
 ### ข้อกำหนด (Prerequisites)
 
-- **.NET SDK 10.0**
+- **.NET SDK**
 - **PostgreSQL**
 
 ### 1. Clone / เปิดโปรเจกต์
