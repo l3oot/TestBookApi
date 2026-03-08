@@ -1,0 +1,11 @@
+namespace TestBookApi.DTOs;
+
+public class BookDto
+{
+    public string Title { get; set; } = string.Empty;
+    public string Subtitle { get; set; } = string.Empty;
+    public string Isbn13 { get; set; } = string.Empty;
+    public string Price { get; set; } = string.Empty;
+    public string Image { get; set; } = string.Empty;
+    public string Url { get; set; } = string.Empty;
+}
