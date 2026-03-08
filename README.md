@@ -57,6 +57,6 @@ dotnet run
 
 เมื่อรันสำเร็จ แอปจะฟังที่ `http://localhost:8xxx` และสามารถเปิด **Swagger UI** ได้ที่:
 
-- `https://localhost:5\8xxx/swagger`
+- `https://localhost:8xxx/swagger`
 
 For test Home Pro
