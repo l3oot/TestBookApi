@@ -59,4 +59,3 @@ dotnet run
 
 - `https://localhost:8xxx/swagger`
 
-For test Home Pro
